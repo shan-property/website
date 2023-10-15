@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { TITLE } from '$lib/config';
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button, Input } from 'flowbite-svelte';
+	import { Button, Input, NavBrand, NavHamburger, NavLi, NavUl, Navbar } from 'flowbite-svelte';
 	import { SearchOutline } from 'flowbite-svelte-icons';
 </script>
 
@@ -31,7 +31,7 @@
 			<NavHamburger />
 		</div>
 		<NavUl
-			nonActiveClass="navbar-navli underline decoration-2 hocus:decoration-white text-white decoration-transparent transition-colors"
+			nonActiveClass="navbar-navli text-white underline decoration-transparent decoration-2 transition-colors hocus:decoration-white"
 		>
 			<NavLi href="/" active={true}>
 				<span class="font-bold">Home</span>

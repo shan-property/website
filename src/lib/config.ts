@@ -1,4 +1,4 @@
-export const TITLE = 'Shan Property';
+export const TITLE = 'S';
 
 export default {
 	TITLE
