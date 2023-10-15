@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 /** @type {import('tailwindcss').Config}*/
 const config = {
 	content: [
@@ -8,10 +10,21 @@ const config = {
 	darkMode: 'class',
 
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				gray: {
+					'700a0': '#37415100'
+				}
+			}
+		}
 	},
 
-	plugins: [require('flowbite/plugin')]
+	plugins: [
+		plugin(function ({ addVariant }) {
+			addVariant('hocus', ['&:hover', '&:focus']);
+		}),
+		require('flowbite/plugin')
+	]
 };
 
 module.exports = config;

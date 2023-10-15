@@ -8,8 +8,8 @@
 	<Navbar class="fixed bg-transparent">
 		<NavBrand href="/">
 			<img src="/favicon.png" class="mr-3 h-6 sm:h-9" alt={TITLE} />
-			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-				<span class="font-bold">{TITLE}</span>
+			<span class="self-center whitespace-nowrap text-xl font-bold text-white">
+				{TITLE}
 			</span>
 		</NavBrand>
 		<div class="flex md:order-2">
@@ -30,7 +30,9 @@
 			</div>
 			<NavHamburger />
 		</div>
-		<NavUl>
+		<NavUl
+			nonActiveClass="navbar-navli underline decoration-2 hocus:decoration-white text-white decoration-transparent transition-colors"
+		>
 			<NavLi href="/" active={true}>
 				<span class="font-bold">Home</span>
 			</NavLi>
