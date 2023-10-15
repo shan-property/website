@@ -2,18 +2,20 @@
 	import { TITLE } from '$lib/config';
 	import { Button, Input, NavBrand, NavHamburger, NavLi, NavUl, Navbar } from 'flowbite-svelte';
 	import { SearchOutline } from 'flowbite-svelte-icons';
+
+	export let bg: boolean;
 </script>
 
 <div class="relative">
-	<Navbar class="fixed bg-transparent">
+	<Navbar class="fixed transition-colors {bg ? '' : 'bg-transparent text-white'}">
 		<NavBrand href="/">
 			<img src="/favicon.png" class="mr-3 h-6 sm:h-9" alt={TITLE} />
-			<span class="self-center whitespace-nowrap text-xl font-bold text-white">
+			<span class="self-center whitespace-nowrap text-xl font-bold">
 				{TITLE}
 			</span>
 		</NavBrand>
 		<!-- TODO: Restyle Search -->
-		<div class="flex">
+		<div class="flex text-gray-700">
 			<Button
 				color="none"
 				data-collapse-toggle="mobile-menu-3"
@@ -32,7 +34,7 @@
 			<NavHamburger />
 		</div>
 		<NavUl
-			nonActiveClass="navbar-navli relative text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-3/4 after:origin-left after:scale-0 after:bg-white/0 after:transition-all after:content-[''] after:hocus:scale-100 after:hocus:bg-white/100"
+			nonActiveClass="navbar-navli relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-3/4 after:origin-left after:scale-0 after:bg-white/0 after:transition-all after:content-[''] after:hocus:scale-100 after:hocus:bg-white/100"
 		>
 			<NavLi href="/" active={true}>
 				<span class="font-bold">Home</span>
