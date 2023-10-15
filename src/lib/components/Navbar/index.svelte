@@ -12,7 +12,8 @@
 				{TITLE}
 			</span>
 		</NavBrand>
-		<div class="flex md:order-2">
+		<!-- TODO: Restyle Search -->
+		<div class="flex">
 			<Button
 				color="none"
 				data-collapse-toggle="mobile-menu-3"
@@ -31,7 +32,7 @@
 			<NavHamburger />
 		</div>
 		<NavUl
-			nonActiveClass="navbar-navli text-white underline decoration-transparent decoration-2 transition-colors hocus:decoration-white"
+			nonActiveClass="navbar-navli relative text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-3/4 after:origin-left after:scale-0 after:bg-white/0 after:transition-all after:content-[''] after:hocus:scale-100 after:hocus:bg-white/100"
 		>
 			<NavLi href="/" active={true}>
 				<span class="font-bold">Home</span>
