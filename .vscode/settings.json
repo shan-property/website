@@ -1,3 +1,10 @@
 {
-	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "activeClass", "nonActiveClass"]
+	"tailwindCSS.classAttributes": [
+		"class",
+		"className",
+		"ngClass",
+		"activeClass",
+		"nonActiveClass",
+		"ulClass"
+	]
 }
