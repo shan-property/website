@@ -7,9 +7,9 @@
 <div class="relative">
 	<Navbar class="fixed bg-transparent">
 		<NavBrand href="/">
-			<img src="/images/flowbite-svelte-icon-logo.svg" class="mr-3 h-6 sm:h-9" alt={TITLE} />
+			<img src="/favicon.png" class="mr-3 h-6 sm:h-9" alt={TITLE} />
 			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-				{TITLE}
+				<span class="font-bold">{TITLE}</span>
 			</span>
 		</NavBrand>
 		<div class="flex md:order-2">
@@ -31,10 +31,18 @@
 			<NavHamburger />
 		</div>
 		<NavUl>
-			<NavLi href="/" active={true}>Home</NavLi>
-			<NavLi href="/properties">Properties</NavLi>
-			<NavLi href="/contact">Contact</NavLi>
-			<NavLi href="/news">News</NavLi>
+			<NavLi href="/" active={true}>
+				<span class="font-bold">Home</span>
+			</NavLi>
+			<NavLi href="/properties">
+				<span class="font-bold">Properties</span>
+			</NavLi>
+			<NavLi href="/contact">
+				<span class="font-bold">Contact</span>
+			</NavLi>
+			<NavLi href="/news">
+				<span class="font-bold">News</span>
+			</NavLi>
 		</NavUl>
 	</Navbar>
 </div>
