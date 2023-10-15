@@ -8,10 +8,14 @@
 </script>
 
 <div class="relative">
-	<Navbar class="fixed transition-colors {bg ? '' : 'bg-transparent text-white'} py-1">
+	<Navbar class="fixed py-1 transition-colors {bg ? '' : 'bg-transparent text-white'}">
 		<NavBrand href="/">
 			<img src="/favicon.png" class="mr-3 h-6 sm:h-9" alt={TITLE} />
-			<span class="self-center whitespace-nowrap text-xl font-bold">
+			<span
+				class="transition-navbar-bg-text self-center whitespace-nowrap font-bold {bg
+					? 'text-lg'
+					: 'text-xl'}"
+			>
 				{TITLE}
 			</span>
 		</NavBrand>
@@ -37,10 +41,10 @@
 			<NavHamburger />
 		</div>
 		<NavUl nonActiveClass="">
-			<NavLi href="/" active={true}>Home</NavLi>
-			<NavLi href="/properties">Properties</NavLi>
-			<NavLi href="/contact">Contact</NavLi>
-			<NavLi href="/news">News</NavLi>
+			<NavLi {bg} href="/" active={true}>Home</NavLi>
+			<NavLi {bg} href="/properties">Properties</NavLi>
+			<NavLi {bg} href="/contact">Contact</NavLi>
+			<NavLi {bg} href="/news">News</NavLi>
 		</NavUl>
 	</Navbar>
 </div>

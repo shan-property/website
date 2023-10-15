@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.transition-navbar-bg-text {
+		transition:
+			font-size 0 cubic-bezier(0.4, 0, 0.2, 1),
+			line-height 0 cubic-bezier(0.4, 0, 0.2, 1),
+			color 0 cubic-bezier(0, 2, 0.4, 1);
+		@apply duration-150;
+	}
+}
