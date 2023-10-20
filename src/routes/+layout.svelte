@@ -14,6 +14,7 @@
 </script>
 
 <svelte:head>
+	<link rel="icon" href="/favicon.svg" />
 	<title>{TITLE}</title>
 </svelte:head>
 
