@@ -3,6 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	:root {
+		--text: #130e01;
+		--background: #ffffff;
+		--primary: #4875e8;
+		--secondary: #ece3cb;
+		--accent: #edbd42;
+	}
+	.dark {
+		--text: #fef9ec;
+		--background: #000000;
+		--primary: #1644b6;
+		--secondary: #342b13;
+		--accent: #bf8e12;
+	}
+}
+
 @layer components {
 	.transition-navbar-bg-text {
 		transition:

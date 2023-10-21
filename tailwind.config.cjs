@@ -12,9 +12,11 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				gray: {
-					'700a0': '#37415100'
-				}
+				text: 'var(--text)',
+				background: 'var(--background)',
+				primary: 'var(--primary)',
+				secondary: 'var(--secondary)',
+				accent: 'var(--accent)'
 			}
 		}
 	},
