@@ -1,6 +1,6 @@
 <script lang="ts">
+	import Head from '$lib/components/Head.svelte';
 	import Navbar from '$lib/components/Navbar/index.svelte';
-	import { TITLE } from '$lib/config';
 	import { onMount } from 'svelte';
 	import '../app.postcss';
 
@@ -13,10 +13,6 @@
 	});
 </script>
 
-<svelte:head>
-	<link rel="icon" href="favicon.svg" />
-	<title>{TITLE}</title>
-</svelte:head>
-
+<Head />
 <Navbar bg={Boolean(scrollY)} />
 <slot />

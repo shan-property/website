@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Svg from '$lib/components/images/Svg.svelte';
 	import { TITLE } from '$lib/config';
 	import { Button, Input, NavBrand, NavHamburger, NavUl, Navbar } from 'flowbite-svelte';
 	import { SearchOutline } from 'flowbite-svelte-icons';
@@ -10,7 +11,7 @@
 <div class="relative">
 	<Navbar class="fixed py-1 transition-colors {bg ? '' : 'bg-transparent text-white'}">
 		<NavBrand href="">
-			<img src="favicon.svg" class="mr-3 h-6 sm:h-9" alt={TITLE} />
+			<Svg name="favicon" class="mr-3 h-6 sm:h-9" alt={TITLE} />
 			<span
 				class="transition-navbar-bg-text self-center whitespace-nowrap font-bold {bg
 					? 'text-lg'
