@@ -40,6 +40,9 @@
 				</div>
 				<Input id="search-navbar" class="pl-10" placeholder="Search..." />
 			</div>
+			<div class="flex md:hidden">
+				<DarkMode />
+			</div>
 			<NavHamburger />
 		</div>
 		<NavUl nonActiveClass="">
@@ -48,6 +51,8 @@
 			<NavLi {bg} href="contact">Contact</NavLi>
 			<NavLi {bg} href="news">News</NavLi> -->
 		</NavUl>
-		<DarkMode />
+		<div class="hidden md:flex">
+			<DarkMode />
+		</div>
 	</Navbar>
 </div>
