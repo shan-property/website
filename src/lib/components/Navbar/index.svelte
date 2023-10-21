@@ -13,9 +13,9 @@
 		<NavBrand href="">
 			<Svg name="favicon" class="mr-3 h-6 sm:h-9" alt={TITLE} />
 			<span
-				class="transition-navbar-bg-text self-center whitespace-nowrap font-bold {bg
+				class="transition-navbar-bg-text self-center whitespace-nowrap font-bold text-primary {bg
 					? 'text-lg'
-					: 'text-xl'}"
+					: 'text-lg sm:text-xl'}"
 			>
 				{TITLE}
 			</span>
