@@ -11,9 +11,9 @@
 <div class="relative">
 	<Navbar class="fixed py-1 transition-colors {bg ? '' : 'bg-transparent text-white'}">
 		<NavBrand href="">
-			<Svg name="favicon" class="mr-3 h-6 sm:h-9" alt={TITLE} />
+			<Svg name="favicon" class="mr-2 h-8 sm:mr-3 sm:h-9" alt={TITLE} />
 			<span
-				class="transition-navbar-bg-text self-center whitespace-nowrap font-bold text-primary {bg
+				class="transition-navbar-bg-text self-center whitespace-nowrap font-bold text-text {bg
 					? 'text-lg'
 					: 'text-lg sm:text-xl'}"
 			>
