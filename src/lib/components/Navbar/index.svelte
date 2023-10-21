@@ -9,8 +9,8 @@
 
 <div class="relative">
 	<Navbar class="fixed py-1 transition-colors {bg ? '' : 'bg-transparent text-white'}">
-		<NavBrand href="/">
-			<img src="/favicon.svg" class="mr-3 h-6 sm:h-9" alt={TITLE} />
+		<NavBrand href="">
+			<img src="favicon.svg" class="mr-3 h-6 sm:h-9" alt={TITLE} />
 			<span
 				class="transition-navbar-bg-text self-center whitespace-nowrap font-bold {bg
 					? 'text-lg'
@@ -41,10 +41,10 @@
 			<NavHamburger />
 		</div>
 		<NavUl nonActiveClass="">
-			<NavLi {bg} href="/" active={true}>Home</NavLi>
-			<!-- <NavLi {bg} href="/properties">Properties</NavLi>
-			<NavLi {bg} href="/contact">Contact</NavLi>
-			<NavLi {bg} href="/news">News</NavLi> -->
+			<NavLi {bg} href="" active={true}>Home</NavLi>
+			<!-- <NavLi {bg} href="properties">Properties</NavLi>
+			<NavLi {bg} href="contact">Contact</NavLi>
+			<NavLi {bg} href="news">News</NavLi> -->
 		</NavUl>
 	</Navbar>
 </div>
