@@ -5,27 +5,33 @@
 
 @layer base {
 	:root {
-		--text: #130e01;
-		--background: #ffffff;
-		--primary: #000080;
-		--secondary: #ece3cb;
-		--accent: #edbd42;
-		--accent-dark: #d9ab36;
+		--text: #0c0c13;
+		--background: #f7f7fa;
+		--primary: #3333d7;
+		--primary-variant: #2828cc;
+		--secondary: #dbdbe1;
+		--secondary-variant: #1e1e24;
+		--accent: #5d6b6f;
+		--accent-variant: #909ea2;
+		--tailwind-timing: cubic-bezier(0.4, 0, 0.2, 1);
 	}
 	.dark {
-		--text: #fef9ec;
-		--background: #000000;
-		--primary: #1644b6;
-		--secondary: #342b13;
-		--accent: #bf8e12;
+		--text: #ececf3;
+		--background: #060609;
+		--primary: #2828cc;
+		--primary-variant: #3030c7;
+		--secondary: #1e1e24;
+		--secondary-variant: #c1c1c7;
+		--accent: #909ea2;
+		--accent-variant: #6b7b80;
 	}
 }
 
 @layer components {
 	.transition-navbar-bg-text {
 		transition:
-			font-size 0 cubic-bezier(0.4, 0, 0.2, 1),
-			line-height 0 cubic-bezier(0.4, 0, 0.2, 1),
+			font-weight 0 var(--tailwind-timing),
+			line-height 0 var(--tailwind-timing),
 			color 0 cubic-bezier(0, 2, 0.4, 1);
 		@apply duration-150;
 	}

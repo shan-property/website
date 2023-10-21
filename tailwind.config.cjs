@@ -15,9 +15,11 @@ const config = {
 				text: 'var(--text)',
 				background: 'var(--background)',
 				primary: 'var(--primary)',
+				'primary-variant': 'var(--primary-variant)',
 				secondary: 'var(--secondary)',
+				'secondary-variant': 'var(--secondary-variant)',
 				accent: 'var(--accent)',
-				'accent-dark': 'var(--accent-dark)'
+				'accent-variant': 'var(--accent-variant)'
 			}
 		}
 	},

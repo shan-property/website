@@ -5,6 +5,7 @@
 		"ngClass",
 		"activeClass",
 		"nonActiveClass",
-		"ulClass"
+		"ulClass",
+		"btnClass"
 	]
 }
