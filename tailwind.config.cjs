@@ -16,7 +16,8 @@ const config = {
 				background: 'var(--background)',
 				primary: 'var(--primary)',
 				secondary: 'var(--secondary)',
-				accent: 'var(--accent)'
+				accent: 'var(--accent)',
+				'accent-dark': 'var(--accent-dark)'
 			}
 		}
 	},

@@ -8,7 +8,9 @@
 
 <NavLi {href} {active}>
 	<span
-		class="transition-navbar-bg-text relative font-bold after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-3/4 after:origin-left after:scale-0 after:bg-white/0 after:transition-all after:content-[''] after:hocus:scale-100 after:hocus:bg-white/100"
+		class="transition-navbar-bg-text relative font-bold after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-3/4 after:origin-left after:translate-y-1 after:scale-0 after:bg-primary after:bg-opacity-0 after:transition-all after:content-[''] after:hocus:scale-100 after:hocus:bg-primary after:hocus:bg-opacity-100 {active
+			? 'text-accent'
+			: ''}"
 		class:text-base={!bg}
 	>
 		<slot />
