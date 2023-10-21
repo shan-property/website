@@ -1,16 +1,11 @@
 <script lang="ts">
 	/* eslint-disable svelte/no-at-html-tags */
-	type Props = {
-		box: number;
-		inner: string | Promise<string> | Promise<typeof import('*?raw')>;
-	};
-
 	const obj_name_props = {
 		favicon: {
 			box: 1563.19,
-			inner: import('./favicon.svg?raw')
+			inner: import('./Favicon.svelte')
 		}
-	} as const satisfies Record<string, Props>;
+	} as const;
 
 	export let name: keyof typeof obj_name_props;
 
@@ -25,12 +20,8 @@
 			<slot name="loading">
 				<rect width="100%" height="100%" fill="currentColor" />
 			</slot>
-		{:then inner}
-			{#if typeof inner === 'string'}
-				{@html inner}
-			{:else}
-				{@html inner.default}
-			{/if}
+		{:then Inner}
+			<Inner.default />
 		{/await}
 	{/if}
 </svg>
