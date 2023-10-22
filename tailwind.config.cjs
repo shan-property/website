@@ -35,6 +35,11 @@ const config = {
 	plugins: [
 		plugin(function ({ addVariant }) {
 			addVariant('hocus', ['&:hover', '&:focus']);
+			addVariant('all-themes', ({ modifySelectors }) => {
+				modifySelectors(({ className }) => {
+					return `:is(.dark .${className}, .${className})`;
+				});
+			});
 		}),
 		require('flowbite/plugin')
 	]
