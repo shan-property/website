@@ -12,15 +12,7 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				text: 'var(--text)',
-				'text-variant': 'var(--text-variant)',
-				background: 'var(--background)',
-				primary: 'var(--primary)',
-				'primary-variant': 'var(--primary-variant)',
-				secondary: 'var(--secondary)',
-				'secondary-variant': 'var(--secondary-variant)',
-				accent: 'var(--accent)',
-				'accent-variant': 'var(--accent-variant)'
+				...ObjColorColorObj(['text', 'background', 'primary', 'secondary', 'accent'])
 			},
 			borderWidth: {
 				2.5: '2.5px'
@@ -37,3 +29,27 @@ const config = {
 };
 
 module.exports = config;
+
+/**
+ * @param {string} color
+ */
+function ColorObj(color) {
+	return {
+		DEFAULT: `var(--${color})`,
+		light: `var(--${color}-light)`,
+		dark: `var(--${color}-dark)`,
+		variant: `var(--${color}-variant)`
+	};
+}
+
+/**
+ *
+ * @param {string[]} color_arr
+ */
+function ObjColorColorObj(color_arr) {
+	let obj = {};
+	for (const color of color_arr) {
+		obj[color] = ColorObj(color);
+	}
+	return obj;
+}
