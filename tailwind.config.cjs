@@ -1,5 +1,13 @@
 const plugin = require('tailwindcss/plugin');
 
+const obj_color_color_obj = ObjColorColorObj([
+	'text',
+	'background',
+	'primary',
+	'secondary',
+	'accent'
+]);
+
 /** @type {import('tailwindcss').Config}*/
 const config = {
 	content: [
@@ -12,7 +20,7 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				...ObjColorColorObj(['text', 'background', 'primary', 'secondary', 'accent'])
+				...obj_color_color_obj
 			},
 			borderWidth: {
 				2.5: '2.5px'
@@ -33,13 +41,21 @@ module.exports = config;
 /**
  * @param {string} color
  */
+function Color(color) {
+	return `hsl(var(--${color}) / <alpha-value>)`;
+}
+
+/**
+ * @param {string} color
+ */
 function ColorObj(color) {
-	return {
-		DEFAULT: `var(--${color})`,
-		light: `var(--${color}-light)`,
-		dark: `var(--${color}-dark)`,
-		variant: `var(--${color}-variant)`
+	const color_obj = {
+		DEFAULT: Color(color)
 	};
+	for (const variant of ['light', 'dark', 'variant']) {
+		color_obj[variant] = Color(`${color}-${variant}`);
+	}
+	return color_obj;
 }
 
 /**
