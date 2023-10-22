@@ -11,9 +11,9 @@
 
 <div class="relative z-10">
 	<nav
-		class="fixed w-full divide-gray-100 border-gray-100 bg-background px-2 py-1 transition-colors dark:divide-gray-700 sm:px-4 {bg
-			? ''
-			: 'bg-transparent text-white'}"
+		class="fixed w-full divide-gray-100 border-gray-100 px-2 py-0.5 transition-colors dark:divide-gray-700 sm:px-4 {bg
+			? 'bg-background/98'
+			: 'bg-background/2 text-white backdrop-blur-sm'}"
 	>
 		<div class="container mx-auto flex flex-wrap items-center justify-between">
 			<NavBrand href="">
@@ -49,7 +49,9 @@
 			</div>
 			<NavUl
 				nonActiveClass=""
-				ulClass="mt-4 flex flex-col items-center p-2 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
+				ulClass="bg-background-dark/5 mt-4 flex flex-col items-center rounded px-3 py-1.5 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium {bg
+					? ''
+					: 'bg-background-dark/5'}"
 			>
 				<NavLi {bg} href="" active={true}>Home</NavLi>
 				<NavLi {bg} href="">Properties</NavLi>

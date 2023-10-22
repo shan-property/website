@@ -24,6 +24,10 @@ const config = {
 			},
 			borderWidth: {
 				2.5: '2.5px'
+			},
+			opacity: {
+				2: '.02',
+				98: '.98'
 			}
 		}
 	},
