@@ -39,19 +39,23 @@
 				</div>
 				<Input id="search-navbar" class="pl-10" placeholder="Search..." />
 			</div>
-			<div class="flex md:hidden">
-				<DarkMode />
-			</div>
+			<DarkMode btnClass="block md:hidden" />
 			<NavHamburger />
 		</div>
-		<NavUl nonActiveClass="">
+		<NavUl
+			nonActiveClass=""
+			ulClass="mt-4 flex flex-col items-center p-2 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
+		>
 			<NavLi {bg} href="" active={true}>Home</NavLi>
 			<NavLi {bg} href="">Properties</NavLi>
-			<NavLi {bg} href="">Contact</NavLi>
 			<NavLi {bg} href="">News</NavLi>
+			<Button
+				class="border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-0 dark:bg-primary dark:text-text"
+				size="sm"
+			>
+				Contact Us
+			</Button>
+			<DarkMode btnClass="hidden md:block" />
 		</NavUl>
-		<div class="hidden md:flex">
-			<DarkMode />
-		</div>
 	</Navbar>
 </div>

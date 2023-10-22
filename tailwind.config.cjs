@@ -21,6 +21,9 @@ const config = {
 				'secondary-variant': 'var(--secondary-variant)',
 				accent: 'var(--accent)',
 				'accent-variant': 'var(--accent-variant)'
+			},
+			borderWidth: {
+				2.5: '2.5px'
 			}
 		}
 	},
