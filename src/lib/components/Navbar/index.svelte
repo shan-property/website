@@ -11,7 +11,7 @@
 
 <div class="relative z-10">
 	<nav
-		class="fixed w-full divide-gray-100 border-gray-100 px-2 py-0.5 dark:divide-gray-700 sm:px-4 {bg
+		class="fixed w-full divide-gray-100 border-gray-100 px-2 py-2 dark:divide-gray-700 sm:px-4 sm:py-0.5 {bg
 			? 'bg-background/98'
 			: 'bg-background/2 text-white backdrop-blur-sm'}"
 	>
@@ -51,9 +51,7 @@
 			</div>
 			<NavUl
 				nonActiveClass=""
-				ulClass="bg-background-dark/5 mt-4 flex flex-col items-center rounded px-3 py-1.5 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium {bg
-					? ''
-					: 'bg-background-dark/5'}"
+				ulClass="bg-background-dark/5 mt-4 flex flex-col items-center rounded px-3 py-1.5 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
 			>
 				<NavLi {bg} href="" active={true}>Home</NavLi>
 				<NavLi {bg} href="">Properties</NavLi>
