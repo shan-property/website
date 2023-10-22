@@ -9,7 +9,7 @@
 	export let bg: boolean;
 </script>
 
-<div class="relative">
+<div class="relative z-10">
 	<Navbar class="fixed py-1 transition-colors {bg ? '' : 'bg-transparent text-white'}">
 		<NavBrand href="">
 			<Favicon class="mr-2 h-8 sm:mr-3 sm:h-9" />
