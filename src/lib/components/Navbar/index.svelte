@@ -31,7 +31,11 @@
 			<div class="flex text-text">
 				<Search />
 				<DarkMode btnClass="block md:hidden" />
-				<NavHamburger />
+				<NavHamburger
+					class={bg
+						? 'text-text hocus:bg-secondary dark:hocus:bg-secondary'
+						: 'text-text-light hocus:bg-secondary-dark dark:hocus:bg-secondary-dark'}
+				/>
 			</div>
 			<NavUl
 				nonActiveClass=""
