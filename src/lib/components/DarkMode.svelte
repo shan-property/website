@@ -8,7 +8,10 @@
 	$: ({ btnClass, ...restProps } = $$props);
 </script>
 
-<DarkMode btnClass="text-secondary-light hocus:text-text {btnClass}" {...restProps}>
+<DarkMode
+	btnClass="text-secondary-light transition-colors hocus:text-text {btnClass}"
+	{...restProps}
+>
 	<svelte:fragment slot="lightIcon">
 		<MoonSolid />
 	</svelte:fragment>

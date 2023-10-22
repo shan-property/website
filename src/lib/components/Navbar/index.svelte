@@ -11,7 +11,7 @@
 
 <div class="relative z-10">
 	<nav
-		class="fixed w-full divide-gray-100 border-gray-100 px-2 py-2 dark:divide-gray-700 sm:px-4 sm:py-0.5 {bg
+		class="fixed w-full divide-gray-100 border-gray-100 px-2 py-2 transition-colors dark:divide-gray-700 sm:px-4 sm:py-0.5 {bg
 			? 'bg-background/98'
 			: 'bg-background/2 text-white backdrop-blur-sm'}"
 	>
@@ -57,7 +57,7 @@
 				<NavLi {bg} href="">Properties</NavLi>
 				<NavLi {bg} href="">News</NavLi>
 				<Button
-					class="border-2 border-primary font-bold text-primary hocus:bg-primary hocus:text-text-variant dark:border-0 dark:bg-primary dark:text-text"
+					class="border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-0 dark:bg-primary dark:text-text"
 					size="sm"
 				>
 					Contact Us
