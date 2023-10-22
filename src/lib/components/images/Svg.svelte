@@ -1,9 +1,11 @@
 <script lang="ts">
+	import Favicon from './Favicon.svelte';
+
 	/* eslint-disable svelte/no-at-html-tags */
 	const obj_name_props = {
 		favicon: {
 			box: 1563.19,
-			inner: import('./Favicon.svelte')
+			inner: Favicon
 		}
 	} as const;
 
@@ -16,12 +18,6 @@
 	{#if typeof inner === 'string'}
 		{@html inner}
 	{:else}
-		{#await inner}
-			<slot name="loading">
-				<rect width="100%" height="100%" fill="currentColor" />
-			</slot>
-		{:then Inner}
-			<Inner.default />
-		{/await}
+		<svelte:component this={inner} />
 	{/if}
 </svg>
