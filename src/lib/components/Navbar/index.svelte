@@ -57,7 +57,7 @@
 				<NavLi {bg} href="">Properties</NavLi>
 				<NavLi {bg} href="">News</NavLi>
 				<Button
-					class="border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-0 dark:bg-primary dark:text-text"
+					class="dark:bg-primary/75 border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-transparent dark:text-text dark:hocus:border-primary dark:hocus:bg-primary"
 					size="sm"
 				>
 					Contact Us
