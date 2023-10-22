@@ -46,9 +46,9 @@
 		</div>
 		<NavUl nonActiveClass="">
 			<NavLi {bg} href="" active={true}>Home</NavLi>
-			<!-- <NavLi {bg} href="properties">Properties</NavLi>
-			<NavLi {bg} href="contact">Contact</NavLi>
-			<NavLi {bg} href="news">News</NavLi> -->
+			<NavLi {bg} href="">Properties</NavLi>
+			<NavLi {bg} href="">Contact</NavLi>
+			<NavLi {bg} href="">News</NavLi>
 		</NavUl>
 		<div class="hidden md:flex">
 			<DarkMode />

@@ -14,5 +14,6 @@
 </script>
 
 <Head />
+
 <Navbar bg={Boolean(scrollY)} />
 <slot />
