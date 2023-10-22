@@ -4,9 +4,14 @@
 
 	type DarkModeProps = (typeof DarkMode.prototype)['$$prop_def'];
 	interface $$Props extends DarkModeProps {}
+
+	$: ({ btnClass, ...restProps } = $$props);
 </script>
 
-<DarkMode {...$$restProps}>
+<DarkMode
+	btnClass="text-secondary-variant transition-colors hocus:text-text {btnClass}"
+	{...restProps}
+>
 	<svelte:fragment slot="lightIcon">
 		<MoonSolid />
 	</svelte:fragment>
