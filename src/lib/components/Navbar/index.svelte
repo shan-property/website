@@ -15,7 +15,9 @@
 			? 'bg-background/98'
 			: 'bg-background/2 text-white backdrop-blur-sm'}"
 	>
-		<div class="container mx-auto flex flex-wrap items-center justify-between">
+		<div
+			class="container mx-auto flex flex-wrap items-center justify-around gap-x-3 sm:justify-between"
+		>
 			<NavBrand href="">
 				<Favicon class="mr-2 h-8 sm:mr-3 sm:h-9" />
 				<span
