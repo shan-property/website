@@ -13,6 +13,7 @@ const config = {
 		extend: {
 			colors: {
 				text: 'var(--text)',
+				'text-variant': 'var(--text-variant)',
 				background: 'var(--background)',
 				primary: 'var(--primary)',
 				'primary-variant': 'var(--primary-variant)',
