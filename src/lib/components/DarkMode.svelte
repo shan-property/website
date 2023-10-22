@@ -9,7 +9,7 @@
 </script>
 
 <DarkMode
-	btnClass="text-secondary-variant transition-colors hocus:text-text {btnClass}"
+	btnClass="text-secondary-light transition-colors hocus:text-text {btnClass}"
 	{...restProps}
 >
 	<svelte:fragment slot="lightIcon">
