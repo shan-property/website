@@ -1,6 +1,10 @@
 const plugin = require('tailwindcss/plugin');
 
-const obj_color_color_obj = ObjColorColorObj(['text', 'bg', 'primary', 'secondary', 'accent']);
+const variant_arr = ['light', 'dark', 'variant'];
+const obj_color_color_obj = ObjColorColorObj(
+	['text', 'bg', 'primary', 'secondary', 'accent'],
+	variant_arr
+);
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -14,7 +18,8 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				...obj_color_color_obj
+				...obj_color_color_obj,
+				bg2: Color('bg2')
 			},
 			content: {
 				empty: "''"
@@ -53,12 +58,13 @@ function Color(color) {
 
 /**
  * @param {string} color
+ * @param {string[]} variant_arr
  */
-function ColorObj(color) {
+function ColorObj(color, variant_arr) {
 	const color_obj = {
 		DEFAULT: Color(color)
 	};
-	for (const variant of ['light', 'dark', 'variant']) {
+	for (const variant of variant_arr) {
 		color_obj[variant] = Color(`${color}-${variant}`);
 	}
 	return color_obj;
@@ -67,11 +73,12 @@ function ColorObj(color) {
 /**
  *
  * @param {string[]} color_arr
+ * @param {string[]} variant_arr
  */
-function ObjColorColorObj(color_arr) {
+function ObjColorColorObj(color_arr, variant_arr) {
 	let obj = {};
 	for (const color of color_arr) {
-		obj[color] = ColorObj(color);
+		obj[color] = ColorObj(color, variant_arr);
 	}
 	return obj;
 }
