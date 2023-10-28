@@ -90,6 +90,13 @@
 }
 
 @layer components {
+	.afterline {
+		@apply relative after:absolute after:left-0 after:w-3/4 after:content-empty;
+
+		&.afterline-sm {
+			@apply after:-bottom-1 after:h-0.5;
+		}
+	}
 	.transition-navbar-bg-text {
 		transition:
 			font-weight 0 var(--tailwind-timing),

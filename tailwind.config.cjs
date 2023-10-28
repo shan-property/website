@@ -22,6 +22,9 @@ const config = {
 			colors: {
 				...obj_color_color_obj
 			},
+			content: {
+				empty: "''"
+			},
 			borderWidth: {
 				2.5: '2.5px'
 			},
