@@ -7,6 +7,7 @@
 		"nonActiveClass",
 		"ulClass",
 		"btnClass",
-		"divClass"
+		"divClass",
+		"floatClass"
 	]
 }

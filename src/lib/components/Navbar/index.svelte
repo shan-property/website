@@ -16,10 +16,10 @@
 			: 'bg-background/2 text-white backdrop-blur-sm'}"
 	>
 		<div
-			class="container mx-auto flex flex-wrap items-center justify-around gap-x-3 sm:justify-between"
+			class="container mx-auto flex flex-wrap items-center justify-around gap-x-5 sm:justify-between"
 		>
 			<NavBrand href="">
-				<Favicon class="mr-2 h-8 sm:mr-3 sm:h-9" />
+				<Favicon class="mr-2 h-8 sm:h-9 lg:mr-3" />
 				<span
 					class="transition-navbar-bg-text self-center whitespace-nowrap font-bold text-text {bg
 						? 'text-lg'
@@ -39,13 +39,13 @@
 			</div>
 			<NavUl
 				nonActiveClass=""
-				ulClass="bg-background-dark/5 mt-4 flex flex-col items-center rounded px-3 py-1.5 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
+				ulClass="mt-4 flex flex-col items-center rounded bg-background-dark/5 px-3 py-1.5 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
 			>
 				<NavLi {bg} href="" active={true}>Home</NavLi>
 				<NavLi {bg} href="">Properties</NavLi>
 				<NavLi {bg} href="">News</NavLi>
 				<Button
-					class="dark:bg-primary/75 border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-transparent dark:text-text dark:hocus:border-primary dark:hocus:bg-primary"
+					class="border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-transparent dark:bg-primary/75 dark:text-text dark:hocus:border-primary dark:hocus:bg-primary"
 					size="sm"
 				>
 					Contact Us

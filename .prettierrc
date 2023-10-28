@@ -9,6 +9,13 @@
 		"prettier-plugin-tailwindcss"
 	],
 	"organizeImportsSkipDestructiveCodeActions": true,
-	"tailwindAttributes": ["activeClass", "nonActiveClass", "ulClass", "btnClass", "divClass"],
+	"tailwindAttributes": [
+		"activeClass",
+		"nonActiveClass",
+		"ulClass",
+		"btnClass",
+		"divClass",
+		"floatClass"
+	],
 	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
 }
