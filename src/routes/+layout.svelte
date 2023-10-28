@@ -18,3 +18,4 @@
 
 <Navbar bg={scrollY > NAVBAR_SCROLL_THRESHOLD} />
 <slot />
+<footer class="pt-10" />
