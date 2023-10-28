@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
+	import { TITLE } from '$lib/config';
 </script>
 
 <Hero />
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1 class="text-center text-2xl font-bold text-primary-variant">{TITLE}</h1>
