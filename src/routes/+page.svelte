@@ -5,4 +5,4 @@
 
 <Hero />
 
-<h1 class="text-center text-2xl font-bold text-primary-variant">{TITLE}</h1>
+<h1 class="text-center font-serif text-2xl font-bold text-primary-variant">{TITLE}</h1>

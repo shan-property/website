@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'Inter';
+	src: url('font/Inter-VariableFont_slnt,wght.ttf');
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	font-style: normal;
+	src: url('font/JosefinSans-VariableFont_wght.ttf');
+}
+
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
@@ -44,6 +55,10 @@
 		--secondary-variant: var(--secondary-light);
 		--accent: var(--accent-light);
 		--accent-variant: var(--accent-dark);
+	}
+
+	body {
+		@apply bg-background font-sans text-text;
 	}
 }
 

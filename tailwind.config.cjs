@@ -25,6 +25,10 @@ const config = {
 			borderWidth: {
 				2.5: '2.5px'
 			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Josefin Sans', 'serif']
+			},
 			opacity: {
 				2: '.02',
 				98: '.98'

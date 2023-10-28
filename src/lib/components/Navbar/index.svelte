@@ -20,13 +20,13 @@
 		>
 			<NavBrand href="">
 				<Favicon class="mr-2 h-8 sm:h-9 lg:mr-3" />
-				<span
-					class="transition-navbar-bg-text self-center whitespace-nowrap font-bold text-text {bg
+				<p
+					class="transition-navbar-bg-text h-6 self-center whitespace-nowrap font-serif font-bold text-text {bg
 						? 'text-lg'
 						: 'text-lg sm:text-xl'}"
 				>
 					{TITLE}
-				</span>
+				</p>
 			</NavBrand>
 			<div class="flex text-text">
 				<Search />
