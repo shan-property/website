@@ -1,12 +1,6 @@
 const plugin = require('tailwindcss/plugin');
 
-const obj_color_color_obj = ObjColorColorObj([
-	'text',
-	'background',
-	'primary',
-	'secondary',
-	'accent'
-]);
+const obj_color_color_obj = ObjColorColorObj(['text', 'bg', 'primary', 'secondary', 'accent']);
 
 /** @type {import('tailwindcss').Config}*/
 const config = {

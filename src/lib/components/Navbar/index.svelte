@@ -12,8 +12,8 @@
 <div class="relative z-10">
 	<nav
 		class="fixed w-full divide-gray-100 border-gray-100 px-2 py-2 transition-colors dark:divide-gray-700 sm:px-4 sm:py-0.5 {bg
-			? 'bg-background/98'
-			: 'bg-background/2 text-white backdrop-blur-sm'}"
+			? 'bg-bg/98'
+			: 'bg-bg/2 text-white backdrop-blur-sm'}"
 	>
 		<div
 			class="container mx-auto flex flex-wrap items-center justify-around gap-x-5 sm:justify-between"
@@ -39,7 +39,7 @@
 			</div>
 			<NavUl
 				nonActiveClass=""
-				ulClass="mt-4 flex flex-col items-center rounded bg-background-dark/5 px-3 py-1.5 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
+				ulClass="mt-4 flex flex-col items-center rounded bg-bg-dark/5 px-3 py-1.5 md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium"
 			>
 				<NavLi {bg} href="" active={true}>Home</NavLi>
 				<NavLi {bg} href="">Properties</NavLi>
