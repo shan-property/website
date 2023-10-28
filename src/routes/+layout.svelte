@@ -18,3 +18,10 @@
 
 <Navbar bg={scrollY > NAVBAR_SCROLL_THRESHOLD} />
 <slot />
+
+<style lang="postcss">
+	:global(body) {
+		background-color: theme(colors.background.DEFAULT);
+		color: theme(colors.text.DEFAULT);
+	}
+</style>
