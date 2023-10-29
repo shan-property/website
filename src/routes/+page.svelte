@@ -22,7 +22,11 @@
 
 <Hero />
 
-<h1 class="text-center text-primary-variant">{TITLE}</h1>
+<header class="flex justify-center">
+	<h1 class="rounded-sm px-2.5 pt-1 text-center text-primary-variant dark:bg-bg-variant">
+		{TITLE}
+	</h1>
+</header>
 
 <article class="flex flex-col gap-9">
 	{#each featured_heading_arr as heading}
