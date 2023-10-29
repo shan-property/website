@@ -22,7 +22,7 @@
 
 <Hero />
 
-<header class="flex justify-center">
+<header class="mb-4 flex justify-center">
 	<h1 class="rounded-sm px-2.5 pt-1 text-center text-primary-variant dark:bg-bg-variant">
 		{TITLE}
 	</h1>
