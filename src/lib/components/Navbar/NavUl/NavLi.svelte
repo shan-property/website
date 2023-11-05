@@ -1,9 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import bg from '$lib/stores/bg';
 	import { NavLi } from 'flowbite-svelte';
 
 	export let href: string;
-	export let active = false;
+	$: active = href === $page.url.pathname;
 </script>
 
 <NavLi {href} {active}>
