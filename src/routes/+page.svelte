@@ -3,6 +3,7 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import { TITLE } from '$lib/config';
 	import obj_featured_heading_store, { featured_heading_arr } from '$lib/stores/featured';
+	import navbar_clip from '$lib/stores/navbar_clip';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -17,6 +18,10 @@
 				});
 			store.set(items);
 		}
+	});
+
+	onMount(() => {
+		$navbar_clip = false;
 	});
 </script>
 

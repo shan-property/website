@@ -1,16 +1,28 @@
 <script lang="ts">
 	import DarkMode from '$lib/components/DarkMode.svelte';
 	import Favicon from '$lib/components/Svgs/Favicon.svelte';
-	import { TITLE } from '$lib/config';
+	import { NAVBAR_SCROLL_THRESHOLD, TITLE } from '$lib/config';
 	import bg from '$lib/stores/bg';
+	import navbar_clip from '$lib/stores/navbar_clip';
 	import { NavBrand, NavHamburger } from 'flowbite-svelte';
 	import NavUl from './NavUl/index.svelte';
 	import Search from './Search.svelte';
+
+	let scrollY = 0;
+	let clientHeight: number;
+
+	$: {
+		$bg = $navbar_clip || scrollY > NAVBAR_SCROLL_THRESHOLD;
+	}
 </script>
 
+<svelte:window bind:scrollY />
+
 <div class="relative z-10">
+	{#if $navbar_clip}<div style="height:{clientHeight}px" />{/if}
 	<nav
-		class="fixed w-full divide-gray-100 border-gray-100 px-2 py-2 transition-colors dark:divide-gray-700 sm:px-4 sm:py-0.5 {$bg
+		bind:clientHeight
+		class="fixed top-0 w-full divide-gray-100 border-gray-100 px-2 py-2 transition-colors dark:divide-gray-700 sm:px-4 sm:py-0.5 {$bg
 			? 'bg-bg/98'
 			: 'bg-bg/2 text-white backdrop-blur-sm'}"
 	>
