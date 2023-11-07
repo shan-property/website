@@ -17,6 +17,9 @@ const config = {
 
 	theme: {
 		extend: {
+			aspectRatio: {
+				photo: '3/2'
+			},
 			colors: {
 				...obj_color_color_obj,
 				bg2: Color('bg2')
