@@ -1,13 +1,16 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import bg from '$lib/stores/bg';
 	import { NavLi } from 'flowbite-svelte';
 
 	export let href: string;
-	$: active = href === $page.url.pathname;
+	$: based_href = `${base}${href}`;
+	console.log(based_href, $page.url.pathname);
+	$: active = based_href === $page.url.pathname;
 </script>
 
-<NavLi {href} {active}>
+<NavLi href={based_href} {active}>
 	<span
 		class="transition-navbar-bg-text afterline afterline-sm font-bold after:bg-primary {active
 			? 'text-primary dark:text-text'
