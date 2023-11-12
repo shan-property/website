@@ -11,6 +11,7 @@ type QueryT = {
 					altText: string;
 					url: string;
 				};
+				productType: ProductType;
 			};
 		}[];
 		pageInfo: {
@@ -33,6 +34,7 @@ export async function queryProducts({ n, cursor }: { n: number; cursor?: string 
 							altText
 							url
 						}
+						productType
 					}
 				}
 				pageInfo {

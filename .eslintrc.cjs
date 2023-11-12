@@ -34,7 +34,8 @@ module.exports = {
 					{
 						varsIgnorePattern: '^\\$\\$Props$'
 					}
-				]
+				],
+				'no-undef': 'off'
 			}
 		},
 		{

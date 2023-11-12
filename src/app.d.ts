@@ -12,6 +12,8 @@ declare global {
 	}
 
 	type Class = HTMLAttributes<HTMLElement>['class'];
+
+	type ProductType = 'Auction' | 'Rental' | 'Sale';
 }
 
 export {};
