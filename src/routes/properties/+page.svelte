@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PropertyCard from '$lib/components/PropertyCard.svelte';
+	import PropertyCard from '$lib/components/PropertyCard/index.svelte';
 	import navbar_clip from '$lib/stores/navbar_clip';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';

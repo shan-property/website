@@ -1,12 +1,12 @@
 <script lang="ts">
+	import Tag from './Tag.svelte';
+
 	export let title: string;
 	export let featuredImage: {
 		url: string;
 		altText: string;
 	};
 	export let productType: ProductType;
-
-	$: first_letter = productType[0];
 </script>
 
 <article
@@ -20,16 +20,7 @@
 		</figcaption>
 		<img src={featuredImage.url} alt={featuredImage.altText} class="aspect-photo object-cover" />
 	</figure>
-	<aside class="mt-0.5">
-		<section
-			class="relative flex rounded-e-sm bg-accent py-0.25 pe-1.25 ps-1 text-end text-sm text-text-variant sm:text-start"
-		>
-			{first_letter}
-			<div
-				class="rest-letters absolute left-full top-0 z-10 -ms-0.5 overflow-hidden rounded-e-sm bg-accent py-0.25 transition-all"
-			>
-				{productType}
-			</div>
-		</section>
+	<aside class="mt-0.25">
+		<Tag tag={productType} />
 	</aside>
 </article>
