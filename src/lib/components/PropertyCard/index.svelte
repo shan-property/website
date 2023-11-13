@@ -20,7 +20,7 @@
 		</figcaption>
 		<img src={featuredImage.url} alt={featuredImage.altText} class="aspect-photo object-cover" />
 	</figure>
-	<aside class="mt-0.25">
+	<aside class="mt-0.25 text-text-variant">
 		<Tag tag={productType} />
 	</aside>
 </article>
