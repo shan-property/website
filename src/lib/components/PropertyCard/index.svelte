@@ -12,9 +12,9 @@
 <article
 	class="flex sm:[&:hover_.rest-letters]:max-w-xs sm:[&:hover_.rest-letters]:pe-1.25 sm:[&_.rest-letters]:max-w-0"
 >
-	<figure class="relative h-max w-64 min-w-[200px] rounded-sm bg-bg p-1 shadow">
+	<figure class="relative h-max w-64 min-w-[200px] bg-bg-light p-1 shadow">
 		<figcaption
-			class="absolute bottom-0 left-1 bg-gradient-to-tr from-bg to-bg/90 pe-1.5 ps-0.5 pt-0.5 font-serif font-bold"
+			class="absolute bottom-0 left-1 bg-gradient-to-tr from-bg-light to-bg-light/90 pe-1.5 ps-0.5 pt-0.5 font-serif font-semibold text-text-dark"
 		>
 			{title}
 		</figcaption>
