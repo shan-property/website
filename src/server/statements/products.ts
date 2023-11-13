@@ -46,5 +46,11 @@ export async function queryProducts({ n, cursor }: { n: number; cursor?: string 
 		variables: { n, cursor }
 	});
 	const res = await res_promise;
-	return res.body.data.products;
+	const products = res.body.data.products;
+	let i = products.edges.length;
+	while (i-- > 0) {
+		const id = products.edges[i].node.id;
+		products.edges[i].node.id = id.substring(id.lastIndexOf('/') + 1);
+	}
+	return products;
 }

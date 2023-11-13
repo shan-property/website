@@ -15,7 +15,7 @@
 	{#await data.products}
 		<p>Loading...</p>
 	{:then products}
-		{#each products.edges as { node: { id, ...node } } (id)}
+		{#each products.edges as { node } (node.id)}
 			<PropertyCard {...node} />
 		{/each}
 	{:catch error}
