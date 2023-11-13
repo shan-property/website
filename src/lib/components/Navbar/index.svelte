@@ -18,7 +18,7 @@
 
 <svelte:window bind:scrollY />
 
-<div class="relative z-10">
+<div class="relative z-20">
 	{#if $navbar_clip}<div style="height:{clientHeight}px" />{/if}
 	<nav
 		bind:clientHeight
