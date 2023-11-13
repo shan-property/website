@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Image from '../images/Image.svelte';
 	import Tag from './Tag.svelte';
 
 	export let title: string;
@@ -18,7 +19,7 @@
 		>
 			{title}
 		</figcaption>
-		<img src={featuredImage.url} alt={featuredImage.altText} class="aspect-photo object-cover" />
+		<Image src={featuredImage.url} alt={featuredImage.altText} class="aspect-photo object-cover" />
 	</figure>
 	<aside class="mt-0.25 text-text-variant">
 		<Tag tag={productType} />

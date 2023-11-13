@@ -13,6 +13,7 @@ declare global {
 
 	type Class = HTMLAttributes<HTMLElement>['class'];
 	type DivProps = svelteHTML.IntrinsicElements['div'];
+	type ImgProps = svelteHTML.IntrinsicElements['img'];
 
 	type ProductType = 'Auction' | 'Rental' | 'Sale';
 }
