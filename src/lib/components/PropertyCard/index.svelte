@@ -10,7 +10,7 @@
 </script>
 
 <article
-	class="flex sm:[&:hover_.rest-letters]:max-w-xs sm:[&:hover_.rest-letters]:pe-1.25 sm:[&_.rest-letters]:max-w-0"
+	class="flex sm:[&:hover_.rest-letters]:max-w-xs sm:[&:hover_.rest-letters]:pe-1.25 [&_.rest-letters]:max-w-0"
 >
 	<figure class="relative h-max w-64 min-w-[200px] bg-bg-light p-1 shadow">
 		<figcaption
