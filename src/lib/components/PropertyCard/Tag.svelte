@@ -18,7 +18,7 @@
 		<svelte:component this={Icon} class="h-5 w-4" />
 	{/await}
 	<div
-		class="rest-letters absolute left-full top-0 z-10 -ms-0.5 overflow-hidden rounded-bl-sm rounded-tr-sm bg-accent py-0.25 transition-all"
+		class="rest-letters absolute left-full top-0 z-10 -ms-0.5 overflow-hidden rounded-bl-sm rounded-tr-sm bg-inherit py-0.25 transition-all"
 	>
 		{tag}
 	</div>
