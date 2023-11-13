@@ -12,6 +12,7 @@ declare global {
 	}
 
 	type Class = HTMLAttributes<HTMLElement>['class'];
+	type DivProps = svelteHTML.IntrinsicElements['div'];
 
 	type ProductType = 'Auction' | 'Rental' | 'Sale';
 }
