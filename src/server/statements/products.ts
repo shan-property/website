@@ -3,16 +3,7 @@ import { query } from './helpers';
 type QueryT = {
 	products: {
 		edges: {
-			node: {
-				id: string;
-				title: string;
-				descriptionHtml: string;
-				featuredImage: {
-					altText: string;
-					url: string;
-				};
-				productType: ProductType;
-			};
+			node: Shan.Product;
 		}[];
 		pageInfo: {
 			hasNextPage: boolean;

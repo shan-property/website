@@ -15,7 +15,18 @@ declare global {
 	type DivProps = svelteHTML.IntrinsicElements['div'];
 	type ImgProps = svelteHTML.IntrinsicElements['img'];
 
-	type ProductType = 'Auction' | 'Rental' | 'Sale';
+	namespace Shan {
+		type Product = {
+			id: string;
+			title: string;
+			descriptionHtml: string;
+			featuredImage: {
+				altText: string;
+				url: string;
+			};
+			productType: 'Auction' | 'Rental' | 'Sale';
+		};
+	}
 }
 
 export {};

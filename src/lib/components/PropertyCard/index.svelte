@@ -8,7 +8,7 @@
 		url: string;
 		altText: string;
 	};
-	export let productType: ProductType;
+	export let productType: Shan.Product['productType'];
 </script>
 
 <article
