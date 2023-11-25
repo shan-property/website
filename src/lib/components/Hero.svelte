@@ -1,6 +1,6 @@
 <script lang="ts">
 	import image from '$lib/components/images/kyoshi-reyes-Ps_ujcY0oT8-unsplash.jpg';
-	import { SLOGAN } from '$lib/config';
+	import { SLOGAN } from '$lib/constants/config';
 </script>
 
 <figure class="relative mb-10">

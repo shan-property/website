@@ -1,21 +1,24 @@
 <script lang="ts">
-	import type { FeaturedHeading } from '$lib/stores/featured';
-	import obj_featured_heading_store from '$lib/stores/featured';
-	import Item from './Item.svelte';
+	import PropertyCard from '$lib/components/PropertyCard/index.svelte';
+	import { updateProducts } from '$lib/stores/products';
+	import { onMount } from 'svelte';
 
-	export let heading: FeaturedHeading;
+	export let heading: string;
+	export let data: Storefront.QueryProducts.R['products']['edges'];
 
-	$: featured_items = obj_featured_heading_store[heading];
+	onMount(() => {
+		updateProducts(data);
+	});
 </script>
 
-<section class="px-1/10 flex flex-wrap justify-center gap-y-3">
-	<h2 class="afterline afterline-base after:left-1/8 mb-3 w-max font-serif text-xl after:bg-accent">
+<section class="flex flex-wrap justify-center gap-y-3 px-1/10">
+	<h2 class="afterline afterline-base mb-3 w-max font-serif text-xl after:left-1/8 after:bg-accent">
 		{heading}
 	</h2>
 
 	<section class="flex basis-full flex-wrap gap-5">
-		{#each $featured_items as { id, ...item } (id)}
-			<Item {id} {...item} />
+		{#each data as { node } (node.id)}
+			<PropertyCard {...node} />
 		{/each}
 	</section>
 </section>

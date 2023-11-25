@@ -1,7 +1,7 @@
 <script lang="ts">
 	import DarkMode from '$lib/components/DarkMode.svelte';
 	import Favicon from '$lib/components/Svgs/Favicon.svelte';
-	import { NAVBAR_SCROLL_THRESHOLD, TITLE } from '$lib/config';
+	import { NAVBAR_SCROLL_THRESHOLD, TITLE } from '$lib/constants/config';
 	import bg from '$lib/stores/bg';
 	import navbar_clip from '$lib/stores/navbar_clip';
 	import { NavBrand, NavHamburger } from 'flowbite-svelte';

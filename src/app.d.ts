@@ -24,8 +24,33 @@ declare global {
 				altText: string;
 				url: string;
 			};
-			productType: 'Auction' | 'Rental' | 'Sale';
+			productType: 'Auction' | 'Rent' | 'Sale';
 		};
+	}
+
+	namespace Storefront {
+		namespace QueryProducts {
+			type P = {
+				n: number;
+				cursor?: string;
+				/**
+				 * @see https://shopify.dev/docs/api/storefront/2023-10/queries/products#argument-products-query
+				 */
+				query?: string;
+			};
+
+			type R = {
+				products: {
+					edges: {
+						node: Shan.Product;
+					}[];
+					pageInfo: {
+						hasNextPage: boolean;
+						endCursor: string;
+					};
+				};
+			};
+		}
 	}
 }
 

@@ -1,24 +1,13 @@
 <script lang="ts">
 	import Featured from '$lib/components/Featured/Featured.svelte';
 	import Hero from '$lib/components/Hero.svelte';
-	import { TITLE } from '$lib/config';
-	import obj_featured_heading_store, { featured_heading_arr } from '$lib/stores/featured';
+	import { TITLE } from '$lib/constants/config';
+	import { obj_productType_heading, productType_arr } from '$lib/constants/product';
 	import navbar_clip from '$lib/stores/navbar_clip';
 	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
 
-	onMount(() => {
-		for (const heading of featured_heading_arr) {
-			const store = obj_featured_heading_store[heading];
-			const items = [];
-			for (let i = 3; i--; )
-				items.push({
-					id: i.toString(),
-					title: 'Loading...',
-					description: 'Loading...'
-				});
-			store.set(items);
-		}
-	});
+	export let data: PageData;
 
 	onMount(() => {
 		$navbar_clip = false;
@@ -34,7 +23,11 @@
 </header>
 
 <article class="flex flex-col gap-9">
-	{#each featured_heading_arr as heading}
-		<Featured {heading} />
+	{#each productType_arr as productType (productType)}
+		{#await data.products[productType]}
+			Loading...
+		{:then products}
+			<Featured heading={obj_productType_heading[productType]} data={products.edges} />
+		{/await}
 	{/each}
 </article>

@@ -1,21 +1,19 @@
 import { query } from './helpers';
 
-type QueryT = {
-	products: {
-		edges: {
-			node: Shan.Product;
-		}[];
-		pageInfo: {
-			hasNextPage: boolean;
-			endCursor: string;
-		};
-	};
-};
-
-export async function queryProducts({ n, cursor }: { n: number; cursor?: string }) {
-	const res_promise = query<QueryT>({
-		query: `query QueryProducts($n: Int!, $cursor: String) {
-			products (first: $n, after: $cursor) {
+export async function queryProducts(params: Storefront.QueryProducts.P) {
+	let gql_params = '$n: Int!';
+	let gql_args = 'first: $n';
+	if ('cursor' in params) {
+		gql_params += ', $cursor: String';
+		gql_args += ', after: $cursor';
+	}
+	if ('query' in params) {
+		gql_params += ', $query: String';
+		gql_args += ', query: $query';
+	}
+	const res_promise = query<Storefront.QueryProducts.R>({
+		query: `query QueryProducts(${gql_params}) {
+			products (${gql_args}) {
 				edges {
 					node {
 						id
@@ -34,7 +32,7 @@ export async function queryProducts({ n, cursor }: { n: number; cursor?: string 
 				}
 			}
 		}`,
-		variables: { n, cursor }
+		variables: params
 	});
 	const res = await res_promise;
 	const products = res.body.data.products;
