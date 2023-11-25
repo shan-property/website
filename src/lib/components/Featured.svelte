@@ -16,9 +16,14 @@
 		{heading}
 	</h2>
 
-	<section class="flex basis-full flex-wrap gap-5">
-		{#each data as { node } (node.id)}
-			<PropertyCard {...node} />
-		{/each}
-	</section>
+	<div class="relative basis-full overflow-x-hidden">
+		<article class="flex gap-5 overflow-x-scroll">
+			{#each data as { node } (node.id)}
+				<PropertyCard {...node} />
+			{/each}
+		</article>
+		<div
+			class="absolute bottom-0 right-0 top-0 h-full w-1/10 max-w-[50px] bg-gradient-to-l from-bg2 to-bg2/0"
+		></div>
+	</div>
 </section>

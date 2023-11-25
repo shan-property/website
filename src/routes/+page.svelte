@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Featured from '$lib/components/Featured/Featured.svelte';
+	import Featured from '$lib/components/Featured.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import { TITLE } from '$lib/constants/config';
 	import { obj_productType_heading, productType_arr } from '$lib/constants/product';
