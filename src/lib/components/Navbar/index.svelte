@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import DarkMode from '$lib/components/DarkMode.svelte';
 	import Favicon from '$lib/components/Svgs/Favicon.svelte';
 	import { NAVBAR_SCROLL_THRESHOLD, TITLE } from '$lib/constants/config';
@@ -27,7 +28,7 @@
 			: 'bg-bg/2 text-white backdrop-blur-sm'}"
 	>
 		<div class="mx-auto flex flex-wrap items-center justify-around gap-x-5 md:w-min lg:w-auto">
-			<NavBrand href="">
+			<NavBrand href="{base}/">
 				<Favicon class="mr-2 h-8 sm:h-9 lg:mr-3" />
 				<p
 					class="transition-navbar-bg-text h-6 self-center whitespace-nowrap font-serif font-bold text-text {$bg

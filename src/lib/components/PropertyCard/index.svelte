@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Image from '../images/Image.svelte';
 	import Tag from './Tag.svelte';
 
@@ -14,7 +15,7 @@
 <article
 	class="flex sm:[&:hover_.rest-letters]:max-w-xs sm:[&:hover_.rest-letters]:pe-1.25 [&_.rest-letters]:max-w-0"
 >
-	<a href="/properties/{id}">
+	<a href="{base}/properties/{id}">
 		<figure class="relative h-max w-64 min-w-[200px] bg-bg-light p-1 shadow">
 			<figcaption
 				class="absolute bottom-0 left-1 bg-gradient-to-tr from-bg-light to-bg-light/90 pe-1.5 ps-0.5 pt-0.5 font-serif font-semibold text-text-dark"
