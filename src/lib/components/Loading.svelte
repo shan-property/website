@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import loading_animation from '$lib/animations/loading.json';
 	import lottie from 'lottie-web';
 	import { onMount } from 'svelte';
 
@@ -10,7 +10,7 @@
 	onMount(() => {
 		const animation = lottie.loadAnimation({
 			container,
-			path: `${base}/animations/loading.json`,
+			animationData: loading_animation,
 			loop: true,
 			autoplay: true,
 			renderer: 'svg'
