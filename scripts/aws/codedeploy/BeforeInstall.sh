@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Debug
+sudo pwd
+sudo ls -la
+
 # Install dependencies
 sudo pnpm install --prod
 
