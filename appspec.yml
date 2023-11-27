@@ -40,10 +40,10 @@ hooks:
   #   incomplete event declarations may cause associated deployments to fail.
   ApplicationStop:
     - location: scripts/aws/codedeploy/ApplicationStop.sh
-      timeout: 300
+      timeout: 180
   BeforeInstall:
     - location: scripts/aws/codedeploy/BeforeInstall.sh
-      timeout: 300
+      timeout: 600
   ApplicationStart:
     - location: scripts/aws/codedeploy/ApplicationStart.sh
-      timeout: 300
+      timeout: 180
