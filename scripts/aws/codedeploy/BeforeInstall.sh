@@ -5,15 +5,15 @@ WEBSITE_CODEDEPLOY_TMP="/opt/codedeploy-agent/deployment-root/$DEPLOYMENT_GROUP_
 WEBSITE_CODEDEPLOY_DIR="/home/ec2-user/website"
 cd $WEBSITE_CODEDEPLOY_TMP
 
+# Copy the environment file
+sudo ln -s "$WEBSITE_CODEDEPLOY_DIR/.env" .env
+
 # Debug
 sudo pwd
 sudo ls -la
 
 # Install dependencies
 sudo pnpm install --prod
-
-# Copy the environment file
-sudo ln -s "$WEBSITE_CODEDEPLOY_DIR/.env" .env
 
 # Build the application
 sudo pnpm run build
