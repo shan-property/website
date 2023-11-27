@@ -14,6 +14,10 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: build/
+    destination: /home/ec2-user/website/build/
+  - source: node_modules/
+    destination: /home/ec2-user/website/node_modules/
+  - source: package.json
     destination: /home/ec2-user/website/
 hooks:
   # For each deployment lifecycle event, specify multiple "location" entries
