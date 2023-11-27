@@ -13,11 +13,21 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: build/
-    destination: /home/ec2-user/website/build/
-  - source: node_modules/
-    destination: /home/ec2-user/website/node_modules/
+  - source: src/
+    destination: /home/ec2-user/website/src/
   - source: package.json
+    destination: /home/ec2-user/website/
+  - source: pnpm-lock.yaml
+    destination: /home/ec2-user/website/
+  - source: postcss.config.cjs
+    destination: /home/ec2-user/website/
+  - source: svelte.config.js
+    destination: /home/ec2-user/website/
+  - source: tailwind.config.cjs
+    destination: /home/ec2-user/website/
+  - source: tsconfig.json
+    destination: /home/ec2-user/website/
+  - source: vite.config.ts
     destination: /home/ec2-user/website/
 hooks:
   # For each deployment lifecycle event, specify multiple "location" entries
@@ -41,8 +51,8 @@ hooks:
   ApplicationStop:
     - location: scripts/aws/codedeploy/ApplicationStop.sh
       timeout: 180
-  BeforeInstall:
-    - location: scripts/aws/codedeploy/BeforeInstall.sh
+  AfterInstall:
+    - location: scripts/aws/codedeploy/AfterInstall.sh
       timeout: 600
   ApplicationStart:
     - location: scripts/aws/codedeploy/ApplicationStart.sh
