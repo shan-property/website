@@ -12,7 +12,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint . --cache --cache-location ./node_modules/.cache/eslint/.eslintcache",
 		"format": "prettier --write . --cache",
-		"prepare": "husky install",
+		"prepare": "svelte-kit sync && husky install",
 		"test:integration": "playwright test",
 		"test:unit": "vitest"
 	},
