@@ -24,7 +24,7 @@ declare global {
 				altText: string;
 				url: string;
 			};
-			productType: 'Auction' | 'Rent' | 'Sale';
+			productType: 'Auction' | 'Rental' | 'Sale';
 		};
 	}
 
@@ -49,6 +49,16 @@ declare global {
 						endCursor: string;
 					};
 				};
+			};
+		}
+
+		namespace QueryProduct {
+			type P = {
+				id: string;
+			};
+
+			type R = {
+				product: Shan.Product;
 			};
 		}
 	}
