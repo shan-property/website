@@ -3,13 +3,9 @@
 	import Image from '../images/Image.svelte';
 	import Tag from './Tag.svelte';
 
-	export let id: string;
-	export let title: string;
-	export let featuredImage: {
-		url: string;
-		altText: string;
-	};
-	export let productType: Shan.Product['productType'];
+	interface $$Props extends Shan.Product {}
+
+	$: ({ id, title, featuredImage, productType } = $$props as $$Props);
 </script>
 
 <article
