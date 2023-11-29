@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import PropertyPage from '$lib/components/PropertyPage/index.svelte';
 	import navbar_clip from '$lib/stores/navbar_clip';
 	import products, { setProduct } from '$lib/stores/products';
 	import { onMount } from 'svelte';
@@ -20,5 +21,5 @@
 </script>
 
 {#if product}
-	<h1>{product.title}</h1>
+	<PropertyPage {...product} />
 {/if}
