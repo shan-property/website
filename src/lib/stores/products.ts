@@ -12,3 +12,10 @@ export function updateProducts(edges: Storefront.QueryProducts.R['products']['ed
 		return products;
 	});
 }
+
+export function setProduct(product: Shan.Product) {
+	products.update((products) => {
+		products[product.id] = product;
+		return products;
+	});
+}
