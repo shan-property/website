@@ -13,23 +13,13 @@
 	<SearchOutline class="h-5 w-5" />
 </Button>
 <form
-	class="navbar-search hidden transition-colors duration-75 all-themes:text-secondary-light all-themes:focus-within:text-text-dark all-themes:hocus:text-secondary-dark md:block"
+	class="hidden transition-colors duration-75 all-themes:text-secondary-light all-themes:focus-within:text-text-dark all-themes:hocus:text-secondary-dark md:block"
 >
 	<Input
-		id="navbar-search-input"
 		floatClass="absolute inset-y-0 left-0 flex items-center pl-3 all-themes:text-current"
-		class="pl-9 all-themes:border-secondary all-themes:!bg-white all-themes:placeholder:!text-secondary-light"
+		class="pl-9 all-themes:border-secondary all-themes:!bg-white all-themes:text-secondary-dark all-themes:placeholder:text-secondary-light all-themes:hocus:text-text-dark"
 		placeholder="Search..."
 	>
 		<SearchOutline slot="left" class="h-4 w-4" />
 	</Input>
 </form>
-
-<style lang="postcss">
-	:global(.navbar-search #navbar-search-input) {
-		@apply all-themes:!text-secondary-dark;
-	}
-	:global(.navbar-search:hover #navbar-search-input) {
-		@apply all-themes:!text-text-dark;
-	}
-</style>
