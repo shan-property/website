@@ -16,7 +16,7 @@
 			? 'text-primary dark:text-text'
 			: `text-secondary-light after:origin-left after:scale-0 after:bg-opacity-0 after:transition-all after:hocus:scale-100 after:hocus:bg-opacity-100 ${
 					$bg ? 'hocus:text-text' : 'hocus:text-text-light'
-			  }`}"
+				}`}"
 		class:text-base={!$bg}
 	>
 		<slot />
