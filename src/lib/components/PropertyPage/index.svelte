@@ -18,5 +18,6 @@
 		/>
 	</Biggerable>
 	<h1>{title}</h1>
-	<p>{descriptionHtml}</p>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	<p class="break-all">{@html descriptionHtml}</p>
 </article>

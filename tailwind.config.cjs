@@ -41,8 +41,10 @@ const config = {
 			spacing: {
 				'1/8': '12.5%',
 				'1/10': '10%',
+				'1/20': '5%',
 				1.25: '0.3125rem',
-				0.25: '0.0625rem'
+				0.25: '0.0625rem',
+				navbar: 'var(--navbar-height)'
 			}
 		}
 	},
@@ -50,7 +52,7 @@ const config = {
 	plugins: [
 		plugin(function ({ addVariant }) {
 			addVariant('hocus', ['&:hover', '&:focus']);
-			addVariant('all-themes', ['&', ':is(.dark &)']);
+			addVariant('all-themes', ['&&', ':is(.dark &&)']);
 		}),
 		require('flowbite/plugin')
 	]

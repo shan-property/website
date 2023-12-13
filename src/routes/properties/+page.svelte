@@ -16,7 +16,7 @@
 	});
 </script>
 
-<article class="flex flex-wrap justify-center gap-x-4 gap-y-3 py-6 pe-[5%] ps-[5%] md:pe-[11%]">
+<article class="flex flex-wrap justify-center gap-x-4 gap-y-3 py-6 pe-1/20 ps-1/20 md:pe-[11%]">
 	{#each Object.values($products) as product (product.id)}
 		<PropertyCard {...product} />
 	{/each}

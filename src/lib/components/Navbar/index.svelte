@@ -8,6 +8,12 @@
 	import { NavBrand, NavHamburger } from 'flowbite-svelte';
 	import NavUl from './NavUl/index.svelte';
 	import Search from './Search.svelte';
+	import { writable } from 'svelte/store';
+	import { setContext } from 'svelte';
+
+	// NavUl toggle
+	let hidden = writable(true);
+	setContext('navHidden', hidden);
 
 	let scrollY = 0;
 	let clientHeight: number;
@@ -19,8 +25,8 @@
 
 <svelte:window bind:scrollY />
 
-<div class="relative z-20">
-	{#if $navbar_clip}<div style="height:{clientHeight}px" />{/if}
+<div class="relative z-20" style="--navbar-height:{clientHeight}px">
+	{#if $navbar_clip}<div class="h-navbar" />{/if}
 	<nav
 		bind:clientHeight
 		class="fixed top-0 w-full divide-gray-100 border-gray-100 px-2 py-2 transition-colors dark:divide-gray-700 sm:px-4 sm:py-0.5 {$bg
