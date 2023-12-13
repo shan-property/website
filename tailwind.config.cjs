@@ -44,6 +44,7 @@ const config = {
 				'1/20': '5%',
 				1.25: '0.3125rem',
 				0.25: '0.0625rem',
+				0.75: '0.1875rem',
 				navbar: 'var(--navbar-height)'
 			}
 		}

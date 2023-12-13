@@ -13,7 +13,7 @@
 </script>
 
 <section
-	class="relative mt-0.25 flex rounded-bl-sm rounded-tr-sm bg-accent py-0.25 pe-1.25 ps-1 text-end text-sm sm:text-start"
+	class="relative mt-0.25 flex rounded-br-sm rounded-tl-sm bg-accent py-0.25 pe-1.25 ps-1 text-end text-sm sm:rounded-bl-sm sm:rounded-br-none sm:rounded-tl-none sm:rounded-tr-sm sm:text-start"
 >
 	{#await Icon_promise}
 		<Loading class={Icon_class} />
