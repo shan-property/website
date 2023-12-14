@@ -10,7 +10,7 @@
 </script>
 
 <article class="container mx-auto lg:max-w-5xl xl:max-w-5xl 2xl:max-w-5xl">
-	<Biggerable options=".{image_class}">
+	<Biggerable class="w-full" options=".{image_class}">
 		<Image
 			class="my-8 aspect-video w-full object-cover sm:rounded-lg md:rounded-xl {image_class}"
 			src={featuredImage.url}
