@@ -34,7 +34,9 @@
 			? 'bg-bg/98'
 			: 'bg-bg/2 text-white backdrop-blur-sm'}"
 	>
-		<div class="mx-auto flex flex-wrap items-center justify-around gap-x-5 md:w-min lg:w-auto">
+		<div
+			class="mx-auto flex flex-wrap items-center justify-around gap-x-5 gap-y-0.25 md:w-min lg:w-auto"
+		>
 			<NavBrand href="{base}/">
 				<Favicon class="mr-2 h-8 sm:h-9 lg:mr-3" />
 				<p
@@ -59,7 +61,7 @@
 				<NavLi href="/properties/">Properties</NavLi>
 				<NavLi href="/news/">News</NavLi>
 				<Button
-					class="w-max border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-transparent dark:bg-primary/75 dark:text-text dark:hocus:border-primary dark:hocus:bg-primary"
+					class="mt-1.75 w-max border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-transparent dark:bg-primary/75 dark:text-text dark:hocus:border-primary dark:hocus:bg-primary md:mt-0"
 					size="sm"
 				>
 					Contact Us

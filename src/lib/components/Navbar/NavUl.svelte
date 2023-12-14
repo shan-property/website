@@ -3,6 +3,7 @@
 	import { writable, type Writable } from 'svelte/store';
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+	import bg from '$lib/stores/bg';
 
 	setContext('activeUrl', writable(''));
 	setContext('navbarContext', { activeClass: '', nonActiveClass: '' });
@@ -14,13 +15,15 @@
 
 {#if $hidden}
 	<ul
-		class="hidden items-center space-x-8 rounded bg-bg-dark/5 px-3 py-1.5 text-sm font-medium md:flex"
+		class="hidden items-center gap-x-7 rounded bg-bg-dark/5 px-4 py-1.5 font-medium md:flex {$bg
+			? 'text-sm'
+			: ''}"
 	>
 		<slot />
 	</ul>
 {:else}
 	<ul
-		class="absolute left-auto right-auto top-navbar mb-2 mt-1 w-1/3 min-w-max rounded bg-bg2 px-1/8 pb-3 pt-1.5 shadow-md sm:right-1/8 sm:w-1/5 sm:px-[4.2%] sm:pb-2.5 sm:pt-2"
+		class="absolute left-auto right-auto top-navbar mb-2 mt-1 rounded bg-bg2 px-7.5 pb-5 pt-4.5 shadow-md sm:right-[15%] sm:ps-5 sm:pt-5"
 		transition:slide={slide_params}
 	>
 		<slot />
