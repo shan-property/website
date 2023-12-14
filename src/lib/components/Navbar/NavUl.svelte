@@ -23,7 +23,7 @@
 	</ul>
 {:else}
 	<ul
-		class="absolute left-auto right-auto top-navbar mb-2 mt-1 rounded bg-bg2 px-7.5 pb-5 pt-4.5 shadow-md sm:right-[15%] sm:ps-5 sm:pt-5"
+		class="absolute left-auto right-auto top-navbar mb-2 mt-1 rounded bg-bg/98 px-7.5 pb-5 pt-4.5 shadow-md sm:right-[15%] sm:ps-5 sm:pt-5"
 		transition:slide={slide_params}
 	>
 		<slot />
