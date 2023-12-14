@@ -9,7 +9,7 @@
 </script>
 
 <article
-	class="relative flex sm:[&:hover_.rest-letters]:max-w-xs sm:[&:hover_.rest-letters]:pe-1.25 [&_.rest-letters]:max-w-0"
+	class="relative flex sm:[&:hover_.tag-label]:me-0.75 sm:[&:hover_.tag-label]:max-w-xs [&_.tag-label]:max-w-0"
 >
 	<a href="{base}/properties/{id}">
 		<figure class="relative h-max w-64 min-w-[200px] bg-bg-light p-1 shadow">

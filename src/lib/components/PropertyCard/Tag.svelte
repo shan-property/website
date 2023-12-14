@@ -5,24 +5,24 @@
 
 	export let tag: string;
 
-	const Icon_class = 'h-6 w-5 sm:h-5 sm:w-4';
+	const Icon_class = 'h-6 w-6 sm:h-5 sm:w-5 ps-1 me-0.75 py-0.25';
 
 	$: Icon_promise = import(`$lib/components/Svgs/${tag}.svelte`) as Promise<{
 		default: typeof SvelteComponent & { props: SvgProps };
 	}>;
 </script>
 
-<section
-	class="relative mt-0.25 flex rounded-br-sm rounded-tl-sm bg-accent py-0.25 pe-1.25 ps-1 text-end text-sm sm:rounded-bl-sm sm:rounded-br-none sm:rounded-tl-none sm:rounded-tr-sm sm:text-start"
->
-	{#await Icon_promise}
-		<Loading class={Icon_class} />
-	{:then { default: Icon }}
-		<svelte:component this={Icon} class={Icon_class} />
-	{/await}
-	<div
-		class="rest-letters absolute left-full top-0 z-10 -ms-0.5 hidden overflow-hidden rounded-bl-sm rounded-tr-sm bg-inherit py-0.25 transition-all sm:block"
+<div class="relative mt-0.25 pe-0.5 {Icon_class}">
+	<figure
+		class="absolute left-0 top-0 z-10 flex rounded-br-sm rounded-tl-sm bg-accent/90 pe-0.5 sm:rounded-bl-sm sm:rounded-br-none sm:rounded-tl-none sm:rounded-tr-sm"
 	>
-		{tag}
-	</div>
-</section>
+		{#await Icon_promise}
+			<Loading class={Icon_class} />
+		{:then { default: Icon }}
+			<svelte:component this={Icon} class={Icon_class} />
+		{/await}
+		<figcaption class="tag-label hidden overflow-hidden text-end text-sm transition-all sm:block">
+			{tag}
+		</figcaption>
+	</figure>
+</div>
