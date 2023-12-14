@@ -5,11 +5,12 @@
 	import { NAVBAR_SCROLL_THRESHOLD, TITLE } from '$lib/constants/config';
 	import bg from '$lib/stores/bg';
 	import navbar_clip from '$lib/stores/navbar_clip';
-	import { NavBrand, NavHamburger } from 'flowbite-svelte';
-	import NavUl from './NavUl/index.svelte';
+	import { Button, NavBrand, NavHamburger } from 'flowbite-svelte';
+	import NavUl from './NavUl.svelte';
 	import Search from './Search.svelte';
 	import { writable } from 'svelte/store';
 	import { setContext } from 'svelte';
+	import NavLi from './NavLi.svelte';
 
 	// NavUl toggle
 	let hidden = writable(true);
@@ -53,7 +54,18 @@
 						: 'text-text-light hocus:bg-secondary-dark dark:hocus:bg-secondary-dark'}
 				/>
 			</div>
-			<NavUl />
+			<NavUl>
+				<NavLi href="/">Home</NavLi>
+				<NavLi href="/properties/">Properties</NavLi>
+				<NavLi href="/news/">News</NavLi>
+				<Button
+					class="w-max border-2 border-primary font-bold text-primary transition-colors hocus:bg-primary hocus:text-text-variant dark:border-transparent dark:bg-primary/75 dark:text-text dark:hocus:border-primary dark:hocus:bg-primary"
+					size="sm"
+				>
+					Contact Us
+				</Button>
+				<DarkMode class="hidden md:block" />
+			</NavUl>
 		</div>
 	</nav>
 </div>
